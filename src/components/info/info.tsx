@@ -1,6 +1,6 @@
-// type Props = {
-//   mode: 'Calling...' | 'Hanging';
-// };
+import { usePhone } from '../hook/use.phone';
+
 export const Info = (/*Props*/) => {
-  return <span className={''}>Calling...</span>;
+  const { phoneState } = usePhone();
+  return <span>{phoneState.mode}</span>;
 };
