@@ -1,13 +1,10 @@
-import { useContext } from 'react';
-import { AppContext } from '../../context/context';
+import { usePhone } from '../hook/use.phone';
 
 type Props = {
   children: string;
 };
 export const Key = ({ children }: Props) => {
-  const {
-    phoneContext: { add },
-  } = useContext(AppContext);
+  const { add } = usePhone();
   return (
     <li>
       <button onClick={() => add(children)} className="key">
